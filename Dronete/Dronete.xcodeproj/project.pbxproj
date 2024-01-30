@@ -1,0 +1,651 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D1B99402B6976690007DE03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B993F2B6976690007DE03 /* AppDelegate.swift */; };
+		5D1B99422B6976690007DE03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B99412B6976690007DE03 /* SceneDelegate.swift */; };
+		5D1B994A2B6976690007DE03 /* Dronete.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B99482B6976690007DE03 /* Dronete.xcdatamodeld */; };
+		5D1B994C2B69766B0007DE03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1B994B2B69766B0007DE03 /* Assets.xcassets */; };
+		5D1B994F2B69766B0007DE03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1B994D2B69766B0007DE03 /* LaunchScreen.storyboard */; };
+		5D1B995A2B69766B0007DE03 /* DroneteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B99592B69766B0007DE03 /* DroneteTests.swift */; };
+		5D1B99642B69766B0007DE03 /* DroneteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B99632B69766B0007DE03 /* DroneteUITests.swift */; };
+		5D1B99662B69766B0007DE03 /* DroneteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B99652B69766B0007DE03 /* DroneteUITestsLaunchTests.swift */; };
+		5D1B99782B6977330007DE03 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B99762B6977330007DE03 /* MainViewController.swift */; };
+		5D1B99792B6977330007DE03 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D1B99772B6977330007DE03 /* MainViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5D1B99562B69766B0007DE03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D1B99342B6976690007DE03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D1B993B2B6976690007DE03;
+			remoteInfo = Dronete;
+		};
+		5D1B99602B69766B0007DE03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D1B99342B6976690007DE03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D1B993B2B6976690007DE03;
+			remoteInfo = Dronete;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5D1B993C2B6976690007DE03 /* Dronete.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dronete.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D1B993F2B6976690007DE03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5D1B99412B6976690007DE03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5D1B99492B6976690007DE03 /* Dronete.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dronete.xcdatamodel; sourceTree = "<group>"; };
+		5D1B994B2B69766B0007DE03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5D1B994E2B69766B0007DE03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5D1B99502B69766B0007DE03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D1B99552B69766B0007DE03 /* DroneteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DroneteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D1B99592B69766B0007DE03 /* DroneteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneteTests.swift; sourceTree = "<group>"; };
+		5D1B995F2B69766B0007DE03 /* DroneteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DroneteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D1B99632B69766B0007DE03 /* DroneteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneteUITests.swift; sourceTree = "<group>"; };
+		5D1B99652B69766B0007DE03 /* DroneteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneteUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5D1B99762B6977330007DE03 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5D1B99772B6977330007DE03 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5D1B99392B6976690007DE03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D1B99522B69766B0007DE03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D1B995C2B69766B0007DE03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5D1B99332B6976690007DE03 = {
+			isa = PBXGroup;
+			children = (
+				5D1B993E2B6976690007DE03 /* Dronete */,
+				5D1B99582B69766B0007DE03 /* DroneteTests */,
+				5D1B99622B69766B0007DE03 /* DroneteUITests */,
+				5D1B993D2B6976690007DE03 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5D1B993D2B6976690007DE03 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D1B993C2B6976690007DE03 /* Dronete.app */,
+				5D1B99552B69766B0007DE03 /* DroneteTests.xctest */,
+				5D1B995F2B69766B0007DE03 /* DroneteUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5D1B993E2B6976690007DE03 /* Dronete */ = {
+			isa = PBXGroup;
+			children = (
+				5D1B99742B6976DB0007DE03 /* CoreData */,
+				5D1B99722B6976760007DE03 /* UI */,
+				5D1B993F2B6976690007DE03 /* AppDelegate.swift */,
+				5D1B99412B6976690007DE03 /* SceneDelegate.swift */,
+				5D1B994B2B69766B0007DE03 /* Assets.xcassets */,
+				5D1B99502B69766B0007DE03 /* Info.plist */,
+			);
+			path = Dronete;
+			sourceTree = "<group>";
+		};
+		5D1B99582B69766B0007DE03 /* DroneteTests */ = {
+			isa = PBXGroup;
+			children = (
+				5D1B99592B69766B0007DE03 /* DroneteTests.swift */,
+			);
+			path = DroneteTests;
+			sourceTree = "<group>";
+		};
+		5D1B99622B69766B0007DE03 /* DroneteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5D1B99632B69766B0007DE03 /* DroneteUITests.swift */,
+				5D1B99652B69766B0007DE03 /* DroneteUITestsLaunchTests.swift */,
+			);
+			path = DroneteUITests;
+			sourceTree = "<group>";
+		};
+		5D1B99722B6976760007DE03 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5D1B99752B6977260007DE03 /* MainView */,
+				5D1B99732B69767C0007DE03 /* LaunchScreen */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		5D1B99732B69767C0007DE03 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				5D1B994D2B69766B0007DE03 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		5D1B99742B6976DB0007DE03 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				5D1B99482B6976690007DE03 /* Dronete.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		5D1B99752B6977260007DE03 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				5D1B99762B6977330007DE03 /* MainViewController.swift */,
+				5D1B99772B6977330007DE03 /* MainViewController.xib */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5D1B993B2B6976690007DE03 /* Dronete */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D1B99692B69766B0007DE03 /* Build configuration list for PBXNativeTarget "Dronete" */;
+			buildPhases = (
+				5D1B99382B6976690007DE03 /* Sources */,
+				5D1B99392B6976690007DE03 /* Frameworks */,
+				5D1B993A2B6976690007DE03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Dronete;
+			productName = Dronete;
+			productReference = 5D1B993C2B6976690007DE03 /* Dronete.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5D1B99542B69766B0007DE03 /* DroneteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D1B996C2B69766B0007DE03 /* Build configuration list for PBXNativeTarget "DroneteTests" */;
+			buildPhases = (
+				5D1B99512B69766B0007DE03 /* Sources */,
+				5D1B99522B69766B0007DE03 /* Frameworks */,
+				5D1B99532B69766B0007DE03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D1B99572B69766B0007DE03 /* PBXTargetDependency */,
+			);
+			name = DroneteTests;
+			productName = DroneteTests;
+			productReference = 5D1B99552B69766B0007DE03 /* DroneteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5D1B995E2B69766B0007DE03 /* DroneteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D1B996F2B69766B0007DE03 /* Build configuration list for PBXNativeTarget "DroneteUITests" */;
+			buildPhases = (
+				5D1B995B2B69766B0007DE03 /* Sources */,
+				5D1B995C2B69766B0007DE03 /* Frameworks */,
+				5D1B995D2B69766B0007DE03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D1B99612B69766B0007DE03 /* PBXTargetDependency */,
+			);
+			name = DroneteUITests;
+			productName = DroneteUITests;
+			productReference = 5D1B995F2B69766B0007DE03 /* DroneteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5D1B99342B6976690007DE03 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					5D1B993B2B6976690007DE03 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					5D1B99542B69766B0007DE03 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 5D1B993B2B6976690007DE03;
+					};
+					5D1B995E2B69766B0007DE03 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 5D1B993B2B6976690007DE03;
+					};
+				};
+			};
+			buildConfigurationList = 5D1B99372B6976690007DE03 /* Build configuration list for PBXProject "Dronete" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5D1B99332B6976690007DE03;
+			productRefGroup = 5D1B993D2B6976690007DE03 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5D1B993B2B6976690007DE03 /* Dronete */,
+				5D1B99542B69766B0007DE03 /* DroneteTests */,
+				5D1B995E2B69766B0007DE03 /* DroneteUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5D1B993A2B6976690007DE03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D1B994F2B69766B0007DE03 /* LaunchScreen.storyboard in Resources */,
+				5D1B99792B6977330007DE03 /* MainViewController.xib in Resources */,
+				5D1B994C2B69766B0007DE03 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D1B99532B69766B0007DE03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D1B995D2B69766B0007DE03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5D1B99382B6976690007DE03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D1B994A2B6976690007DE03 /* Dronete.xcdatamodeld in Sources */,
+				5D1B99402B6976690007DE03 /* AppDelegate.swift in Sources */,
+				5D1B99422B6976690007DE03 /* SceneDelegate.swift in Sources */,
+				5D1B99782B6977330007DE03 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D1B99512B69766B0007DE03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D1B995A2B69766B0007DE03 /* DroneteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D1B995B2B69766B0007DE03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D1B99662B69766B0007DE03 /* DroneteUITestsLaunchTests.swift in Sources */,
+				5D1B99642B69766B0007DE03 /* DroneteUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5D1B99572B69766B0007DE03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D1B993B2B6976690007DE03 /* Dronete */;
+			targetProxy = 5D1B99562B69766B0007DE03 /* PBXContainerItemProxy */;
+		};
+		5D1B99612B69766B0007DE03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D1B993B2B6976690007DE03 /* Dronete */;
+			targetProxy = 5D1B99602B69766B0007DE03 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5D1B994D2B69766B0007DE03 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D1B994E2B69766B0007DE03 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5D1B99672B69766B0007DE03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5D1B99682B69766B0007DE03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5D1B996A2B69766B0007DE03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9GK3478S4Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Dronete/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DanielCazorro.Dronete;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5D1B996B2B69766B0007DE03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9GK3478S4Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Dronete/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DanielCazorro.Dronete;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5D1B996D2B69766B0007DE03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9GK3478S4Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DanielCazorro.DroneteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dronete.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Dronete";
+			};
+			name = Debug;
+		};
+		5D1B996E2B69766B0007DE03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9GK3478S4Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DanielCazorro.DroneteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dronete.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Dronete";
+			};
+			name = Release;
+		};
+		5D1B99702B69766B0007DE03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9GK3478S4Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DanielCazorro.DroneteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Dronete;
+			};
+			name = Debug;
+		};
+		5D1B99712B69766B0007DE03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9GK3478S4Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DanielCazorro.DroneteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Dronete;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5D1B99372B6976690007DE03 /* Build configuration list for PBXProject "Dronete" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D1B99672B69766B0007DE03 /* Debug */,
+				5D1B99682B69766B0007DE03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D1B99692B69766B0007DE03 /* Build configuration list for PBXNativeTarget "Dronete" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D1B996A2B69766B0007DE03 /* Debug */,
+				5D1B996B2B69766B0007DE03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D1B996C2B69766B0007DE03 /* Build configuration list for PBXNativeTarget "DroneteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D1B996D2B69766B0007DE03 /* Debug */,
+				5D1B996E2B69766B0007DE03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D1B996F2B69766B0007DE03 /* Build configuration list for PBXNativeTarget "DroneteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D1B99702B69766B0007DE03 /* Debug */,
+				5D1B99712B69766B0007DE03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5D1B99482B6976690007DE03 /* Dronete.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5D1B99492B6976690007DE03 /* Dronete.xcdatamodel */,
+			);
+			currentVersion = 5D1B99492B6976690007DE03 /* Dronete.xcdatamodel */;
+			path = Dronete.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5D1B99342B6976690007DE03 /* Project object */;
+}
