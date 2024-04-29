@@ -33,4 +33,23 @@ final class DroneteTests: XCTestCase {
         }
     }
 
+    // Models
+    func testItemInitialization() {
+        let imageName = "test_image"
+        let title = "Test Item"
+        
+        let item = Item(imageName: imageName, title: title)
+        
+        XCTAssertEqual(item.imageName, imageName, "Image name should match")
+        XCTAssertEqual(item.title, title, "Title should match")
+    }
+
+    func testItemEquality() {
+        let item1 = Item(imageName: "image1", title: "Item 1")
+        let item2 = Item(imageName: "image1", title: "Item 1")
+        let item3 = Item(imageName: "image2", title: "Item 2")
+        
+        XCTAssertEqual(item1, item2, "Items with same properties should be equal")
+        XCTAssertNotEqual(item1, item3, "Items with different properties should not be equal")
+    }
 }

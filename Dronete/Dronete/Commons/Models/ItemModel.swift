@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct Item {
+struct Item: Equatable {
     let imageName: String
     let title: String
+
+    static func == (lhs: Item, rhs: Item) -> Bool {
+        return lhs.imageName == rhs.imageName && lhs.title == rhs.title
+    }
 }
