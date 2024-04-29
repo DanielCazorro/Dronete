@@ -101,10 +101,9 @@
 		5D1B993E2B6976690007DE03 /* Dronete */ = {
 			isa = PBXGroup;
 			children = (
+				5DC881E62BDFE8500058C003 /* App */,
 				5D1B99742B6976DB0007DE03 /* CoreData */,
 				5D1B99722B6976760007DE03 /* UI */,
-				5D1B993F2B6976690007DE03 /* AppDelegate.swift */,
-				5D1B99412B6976690007DE03 /* SceneDelegate.swift */,
 				5D1B994B2B69766B0007DE03 /* Assets.xcassets */,
 				5D1B99502B69766B0007DE03 /* Info.plist */,
 			);
@@ -160,6 +159,15 @@
 				5D1B99772B6977330007DE03 /* MainViewController.xib */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		5DC881E62BDFE8500058C003 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5D1B993F2B6976690007DE03 /* AppDelegate.swift */,
+				5D1B99412B6976690007DE03 /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
