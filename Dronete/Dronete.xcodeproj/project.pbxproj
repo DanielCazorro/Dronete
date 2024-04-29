@@ -23,6 +23,7 @@
 		5DC881F02BE01C920058C003 /* MainViewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC881EF2BE01C920058C003 /* MainViewDataManager.swift */; };
 		5DC881F22BE01C9B0058C003 /* MainViewApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC881F12BE01C9B0058C003 /* MainViewApiClient.swift */; };
 		5DC881F72BE01E780058C003 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC881F62BE01E780058C003 /* ItemModel.swift */; };
+		5DC881F92BE032B60058C003 /* DroneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC881F82BE032B60058C003 /* DroneModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		5DC881EF2BE01C920058C003 /* MainViewDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewDataManager.swift; sourceTree = "<group>"; };
 		5DC881F12BE01C9B0058C003 /* MainViewApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewApiClient.swift; sourceTree = "<group>"; };
 		5DC881F62BE01E780058C003 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		5DC881F82BE032B60058C003 /* DroneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				5DC881F62BE01E780058C003 /* ItemModel.swift */,
+				5DC881F82BE032B60058C003 /* DroneModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				5DC881F72BE01E780058C003 /* ItemModel.swift in Sources */,
 				5DC881F22BE01C9B0058C003 /* MainViewApiClient.swift in Sources */,
 				5DC881EA2BDFEDA40058C003 /* MainCollectionViewCell.swift in Sources */,
+				5DC881F92BE032B60058C003 /* DroneModel.swift in Sources */,
 				5D1B99422B6976690007DE03 /* SceneDelegate.swift in Sources */,
 				5D1B99782B6977330007DE03 /* MainViewController.swift in Sources */,
 				5DC881EE2BE01C890058C003 /* MainViewModel.swift in Sources */,
