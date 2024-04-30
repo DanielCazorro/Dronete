@@ -11,15 +11,31 @@ class MainViewModel {
     
     // MARK: - Properties
     private var items: [Item] = []
+    private let dataManager: MainViewDataManager
+    
+    init(dataManager: MainViewDataManager = MainViewDataManager()) {
+        self.dataManager = dataManager
+    }
     
     // MARK: - Methods
     func fetchData() {
-        // Aquí puedes llamar a tu MainViewDataManager o MainViewApiClient para obtener los datos
-        // En este ejemplo, simplemente inicializaremos los datos mockeados
-        items = [
-            Item(imageName: "drone_icon", title: "Drones"),
-            Item(imageName: "brand_icon", title: "Marcas")
-        ]
+        // Llamamos al método fetchData del DataManager para obtener los datos de la API
+        dataManager.fetchData { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let drones):
+                // Actualizamos el estado interno con los datos obtenidos
+                self.items = drones.map { Item(imageName: $0.manufacturer, title: $0.name) }
+                // Imprimimos los datos obtenidos en la consola
+                print("Datos de la API:")
+                self.items.forEach { item in
+                    print(item)
+                }
+            case .failure(let error):
+                // Manejamos el error, como imprimirlo en la consola por ahora
+                print("Error fetching data: \(error)")
+            }
+        }
     }
     
     func numberOfItems() -> Int {
