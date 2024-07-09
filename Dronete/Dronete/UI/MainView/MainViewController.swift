@@ -51,14 +51,13 @@ extension MainViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainCollectionViewCell.identifier, 
-                                                            for: indexPath) as? MainCollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainCollectionViewCell.identifier,
+                                                            for: indexPath) as? MainCollectionViewCell,
+              let manufacturer = viewModel.manufacturer(at: indexPath.item)
         else { return UICollectionViewCell() }
         
-        if let item = viewModel.item(at: indexPath.item) {
-            cell.ivImage.image = viewModel.imageForItem(at: indexPath.item)
-            cell.lbTitle.text = item.title
-        }
+        cell.ivImage.image = viewModel.imageForItem(at: indexPath.item)
+        cell.lbTitle.text = manufacturer
         return cell
     }
 }

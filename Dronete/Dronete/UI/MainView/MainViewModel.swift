@@ -10,10 +10,12 @@ import UIKit
 class MainViewModel {
     
     // MARK: - Properties
+    private var manufacturers: [String] = []
     private var items: [Item] = []
     private let dataManager: MainViewDataManager
     var didUpdateData: (() -> Void)?
     
+    // MARK: - Init
     init(dataManager: MainViewDataManager = MainViewDataManager()) {
         self.dataManager = dataManager
     }
@@ -27,6 +29,8 @@ class MainViewModel {
             case .success(let drones):
                 // Actualizamos el estado interno con los datos obtenidos
                 self.items = drones.map { Item(imageName: $0.manufacturer, title: $0.name) }
+                // Actualizamos el estado interno con los datos obtenidos del array de Marcas
+                self.manufacturers = Array(Set(self.items.map { $0.imageName })).sorted()
                 // Notificamos a la vista
                 self.didUpdateData?()
                 // Imprimimos los datos obtenidos en la consola
@@ -42,14 +46,22 @@ class MainViewModel {
     }
     
     func numberOfItems() -> Int {
-        return items.count
+        return manufacturers.count
     }
     
+    // FIXME: Borrar si no se usan
     func item(at index: Int) -> Item? {
         guard index >= 0 && index < items.count else {
             return nil
         }
         return items[index]
+    }
+    
+    func manufacturer(at index: Int) -> String? {
+        guard index >= 0 && index < manufacturers.count else {
+            return nil
+        }
+        return manufacturers[index]
     }
     
     func imageForItem(at index: Int) -> UIImage? {
@@ -59,7 +71,7 @@ class MainViewModel {
         if let image = UIImage(named: item.imageName) {
             return image
         } else {
-            return UIImage(systemName: "questionmark.square.fill")
+            return UIImage(systemName: "paperplane.fill")
         }
     }
 }
