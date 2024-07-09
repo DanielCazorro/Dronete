@@ -20,4 +20,9 @@ class MainCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        ivImage.image = nil
+        lbTitle.text = ""
+    }
 }

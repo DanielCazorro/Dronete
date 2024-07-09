@@ -19,7 +19,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
-        
+        setupViewModel()
         viewModel.fetchData()
     }
     
@@ -30,13 +30,18 @@ class MainViewController: UIViewController {
     }
     
     private func registerCollectionViewCell() {
-        cvMainCollectionView.register(UINib(
-            nibName: "MainCollectionViewCell",
-            bundle: nil), forCellWithReuseIdentifier: MainCollectionViewCell.identifier)
+        cvMainCollectionView.register(UINib(nibName: "MainCollectionViewCell",
+                                            bundle: nil),
+                                            forCellWithReuseIdentifier: MainCollectionViewCell.identifier)
     }
     
-    
-    
+    private func setupViewModel() {
+        viewModel.didUpdateData = { [weak self] in
+            DispatchQueue.main.async {
+                self?.cvMainCollectionView.reloadData()
+            }
+        }
+    }
 }
 
 extension MainViewController: UICollectionViewDataSource {
@@ -46,15 +51,14 @@ extension MainViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainCollectionViewCell.identifier, for: indexPath) as? MainCollectionViewCell else {
-            return UICollectionViewCell()
-        }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainCollectionViewCell.identifier, 
+                                                            for: indexPath) as? MainCollectionViewCell
+        else { return UICollectionViewCell() }
         
         if let item = viewModel.item(at: indexPath.item) {
             cell.ivImage.image = viewModel.imageForItem(at: indexPath.item)
             cell.lbTitle.text = item.title
         }
-        
         return cell
     }
 }

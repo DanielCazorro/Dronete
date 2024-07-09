@@ -12,6 +12,7 @@ class MainViewModel {
     // MARK: - Properties
     private var items: [Item] = []
     private let dataManager: MainViewDataManager
+    var didUpdateData: (() -> Void)?
     
     init(dataManager: MainViewDataManager = MainViewDataManager()) {
         self.dataManager = dataManager
@@ -26,6 +27,8 @@ class MainViewModel {
             case .success(let drones):
                 // Actualizamos el estado interno con los datos obtenidos
                 self.items = drones.map { Item(imageName: $0.manufacturer, title: $0.name) }
+                // Notificamos a la vista
+                self.didUpdateData?()
                 // Imprimimos los datos obtenidos en la consola
                 print("Datos de la API:")
                 self.items.forEach { item in
