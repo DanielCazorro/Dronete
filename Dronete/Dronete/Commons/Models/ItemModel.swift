@@ -8,8 +8,7 @@
 import Foundation
 
 struct Item: Equatable {
-    let imageName: String
-    let title: String
+    let imageName, title: String
 
     static func == (lhs: Item, rhs: Item) -> Bool {
         return lhs.imageName == rhs.imageName && lhs.title == rhs.title

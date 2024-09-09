@@ -10,26 +10,16 @@ import XCTest
 
 final class DroneteTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    // MARK: - Properties
+    var apiClient: MainViewApiClient!
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+    // MARK: - Lifecycle
+    override func setUpWithError() throws {}
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+    override func tearDownWithError() throws {}
 
     func testPerformanceExample() throws {
-        // This is an example of a performance test case.
         self.measure {
-            // Put the code you want to measure the time of here.
         }
     }
 
@@ -51,5 +41,38 @@ final class DroneteTests: XCTestCase {
         
         XCTAssertEqual(item1, item2, "Items with same properties should be equal")
         XCTAssertNotEqual(item1, item3, "Items with different properties should not be equal")
+    }
+    
+    // StringExtension
+    func testEmptyString() {
+        XCTAssertEqual(String.empty, "", "String.empty should return an empty string")
+    }
+    
+    // MainCollectionViewCell
+    func testPrepareForReuse() {
+        // Cargar la celda desde el Nib
+        let nib = UINib(nibName: "MainCollectionViewCell", bundle: nil)
+        let objects = nib.instantiate(withOwner: nil, options: nil)
+        
+        // Asegurarse de que estamos obteniendo la celda correcta
+        guard let cell = objects.first as? MainCollectionViewCell else {
+            XCTFail("No se pudo cargar la celda desde el Nib")
+            return
+        }
+        
+        // Asignar valores iniciales a las propiedades
+        cell.ivImage.image = UIImage(systemName: "paperplane.fill")
+        cell.lbTitle.text = "Test Title"
+        
+        // Verificar que las propiedades se hayan asignado correctamente
+        XCTAssertNotNil(cell.ivImage.image, "La imagen debería estar establecida.")
+        XCTAssertEqual(cell.lbTitle.text, "Test Title", "El título debería estar establecido.")
+        
+        // Llamar a prepareForReuse
+        cell.prepareForReuse()
+        
+        // Verificar que las propiedades se hayan reiniciado
+        XCTAssertNil(cell.ivImage.image, "La imagen debería ser nil después de prepareForReuse.")
+        XCTAssertEqual(cell.lbTitle.text, String.empty, "El texto debería ser .empty después de prepareForReuse.")
     }
 }

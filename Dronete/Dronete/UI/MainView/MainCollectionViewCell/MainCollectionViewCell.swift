@@ -23,6 +23,6 @@ class MainCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         ivImage.image = nil
-        lbTitle.text = ""
+        lbTitle.text = .empty
     }
 }
