@@ -12,6 +12,7 @@ class MainViewDataManager {
     // Cliente de la API para obtener los datos
     private let apiClient: MainViewApiClient
     
+    // Constructor
     init(apiClient: MainViewApiClient = MainViewApiClient()) {
         self.apiClient = apiClient
     }

@@ -14,6 +14,8 @@ class MainViewController: UIViewController {
 
     // MARK: - IBOutlets
     @IBOutlet weak var cvMainCollectionView: UICollectionView!
+    @IBOutlet weak var homeTabIcon: UITabBarItem!
+    @IBOutlet weak var droneCategoryTabIcon: UITabBarItem!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {

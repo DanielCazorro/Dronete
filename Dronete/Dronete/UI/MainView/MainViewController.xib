@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,6 +11,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Dronete" customModuleProvider="target">
             <connections>
                 <outlet property="cvMainCollectionView" destination="kbH-sY-1Bj" id="aqo-OV-Xcv"/>
+                <outlet property="droneCategoryTabIcon" destination="GLf-du-0Nc" id="UMG-M6-RQ9"/>
+                <outlet property="homeTabIcon" destination="MmO-cm-g8I" id="I0G-4O-Sa4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,7 +28,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="kbH-sY-1Bj">
-                    <rect key="frame" x="16" y="113.33333333333331" width="361" height="688.66666666666674"/>
+                    <rect key="frame" x="16" y="113.33333333333331" width="361" height="638.66666666666674"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mk5-VZ-8Yf">
                         <size key="itemSize" width="128" height="128"/>
@@ -35,22 +37,37 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qC6-cw-OzJ">
+                    <rect key="frame" x="0.0" y="752" width="393" height="66"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="66" id="HbG-tV-Qyt"/>
+                    </constraints>
+                    <items>
+                        <tabBarItem selectedImage="homekit" catalog="system" systemItem="favorites" id="MmO-cm-g8I"/>
+                        <tabBarItem systemItem="more" id="GLf-du-0Nc"/>
+                    </items>
+                </tabBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pgy-Pf-Xj1" secondAttribute="trailing" id="0nR-oG-OTV"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kbH-sY-1Bj" secondAttribute="trailing" constant="16" id="1vG-eb-SeI"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="kbH-sY-1Bj" secondAttribute="bottom" constant="16" id="L6X-QS-qbq"/>
+                <constraint firstItem="qC6-cw-OzJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GSi-vA-Ipf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qC6-cw-OzJ" secondAttribute="trailing" id="Rnn-Yo-NxR"/>
+                <constraint firstItem="qC6-cw-OzJ" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="TUR-k5-I01"/>
                 <constraint firstItem="kbH-sY-1Bj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="VXJ-2K-XtE"/>
                 <constraint firstItem="pgy-Pf-Xj1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eAd-ZW-TTM"/>
                 <constraint firstItem="kbH-sY-1Bj" firstAttribute="top" secondItem="pgy-Pf-Xj1" secondAttribute="bottom" constant="16" id="mcd-GS-GD4"/>
                 <constraint firstItem="pgy-Pf-Xj1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ntp-Dp-MhB"/>
+                <constraint firstItem="qC6-cw-OzJ" firstAttribute="top" secondItem="kbH-sY-1Bj" secondAttribute="bottom" id="xh3-kl-OnI"/>
             </constraints>
-            <point key="canvasLocation" x="131" y="-11"/>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
         </view>
     </objects>
     <resources>
+        <image name="homekit" catalog="system" width="128" height="104"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

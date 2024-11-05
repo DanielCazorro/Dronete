@@ -11,7 +11,7 @@ class MainViewModel {
     
     // MARK: - Properties
     private var manufacturers: [String] = []
-    private var items: [Item] = []
+    var items: [Item] = []
     private let dataManager: MainViewDataManager
     var didUpdateData: (() -> Void)?
     
