@@ -7,25 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1125116D2DE256C800C7A9D8 /* DroneAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125116C2DE256C800C7A9D8 /* DroneAPIClient.swift */; };
+		1125116F2DE256D000C7A9D8 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125116E2DE256D000C7A9D8 /* ApiError.swift */; };
+		112511712DE256E900C7A9D8 /* DroneRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112511702DE256E900C7A9D8 /* DroneRepository.swift */; };
+		112511762DE257E600C7A9D8 /* DroneDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112511742DE257E600C7A9D8 /* DroneDetailViewController.swift */; };
+		112511772DE257E600C7A9D8 /* DroneDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112511752DE257E600C7A9D8 /* DroneDetailViewController.xib */; };
+		112511792DE2580400C7A9D8 /* DroneDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112511782DE2580400C7A9D8 /* DroneDetailViewModel.swift */; };
 		5D1B99402B6976690007DE03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B993F2B6976690007DE03 /* AppDelegate.swift */; };
 		5D1B99422B6976690007DE03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B99412B6976690007DE03 /* SceneDelegate.swift */; };
 		5D1B994A2B6976690007DE03 /* Dronete.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B99482B6976690007DE03 /* Dronete.xcdatamodeld */; };
 		5D1B994C2B69766B0007DE03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1B994B2B69766B0007DE03 /* Assets.xcassets */; };
 		5D1B994F2B69766B0007DE03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1B994D2B69766B0007DE03 /* LaunchScreen.storyboard */; };
-		5D1B995A2B69766B0007DE03 /* DroneteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B99592B69766B0007DE03 /* DroneteTests.swift */; };
+		5D1B995A2B69766B0007DE03 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B99592B69766B0007DE03 /* MainViewModelTests.swift */; };
 		5D1B99642B69766B0007DE03 /* DroneteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B99632B69766B0007DE03 /* DroneteUITests.swift */; };
 		5D1B99662B69766B0007DE03 /* DroneteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B99652B69766B0007DE03 /* DroneteUITestsLaunchTests.swift */; };
 		5D1B99782B6977330007DE03 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B99762B6977330007DE03 /* MainViewController.swift */; };
 		5D1B99792B6977330007DE03 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D1B99772B6977330007DE03 /* MainViewController.xib */; };
-		5D6F2CDA2CDA9E2700DABBCC /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D6F2CD92CDA9E2700DABBCC /* CategoryViewController.xib */; };
-		5D6F2CDB2CDA9E2700DABBCC /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6F2CD82CDA9E2700DABBCC /* CategoryViewController.swift */; };
-		5DA554F02C8F60C400278FC6 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA554EF2C8F60C400278FC6 /* StringExtension.swift */; };
+		5DA554F02C8F60C400278FC6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA554EF2C8F60C400278FC6 /* Extensions.swift */; };
 		5DC881EA2BDFEDA40058C003 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC881E82BDFEDA40058C003 /* MainCollectionViewCell.swift */; };
 		5DC881EB2BDFEDA40058C003 /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC881E92BDFEDA40058C003 /* MainCollectionViewCell.xib */; };
 		5DC881EE2BE01C890058C003 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC881ED2BE01C890058C003 /* MainViewModel.swift */; };
-		5DC881F02BE01C920058C003 /* MainViewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC881EF2BE01C920058C003 /* MainViewDataManager.swift */; };
-		5DC881F22BE01C9B0058C003 /* MainViewApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC881F12BE01C9B0058C003 /* MainViewApiClient.swift */; };
-		5DC881F72BE01E780058C003 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC881F62BE01E780058C003 /* ItemModel.swift */; };
 		5DC881F92BE032B60058C003 /* DroneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC881F82BE032B60058C003 /* DroneModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1125116C2DE256C800C7A9D8 /* DroneAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneAPIClient.swift; sourceTree = "<group>"; };
+		1125116E2DE256D000C7A9D8 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		112511702DE256E900C7A9D8 /* DroneRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneRepository.swift; sourceTree = "<group>"; };
+		112511742DE257E600C7A9D8 /* DroneDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneDetailViewController.swift; sourceTree = "<group>"; };
+		112511752DE257E600C7A9D8 /* DroneDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DroneDetailViewController.xib; sourceTree = "<group>"; };
+		112511782DE2580400C7A9D8 /* DroneDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneDetailViewModel.swift; sourceTree = "<group>"; };
 		5D1B993C2B6976690007DE03 /* Dronete.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dronete.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1B993F2B6976690007DE03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D1B99412B6976690007DE03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,21 +62,16 @@
 		5D1B994E2B69766B0007DE03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D1B99502B69766B0007DE03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D1B99552B69766B0007DE03 /* DroneteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DroneteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D1B99592B69766B0007DE03 /* DroneteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneteTests.swift; sourceTree = "<group>"; };
+		5D1B99592B69766B0007DE03 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		5D1B995F2B69766B0007DE03 /* DroneteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DroneteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1B99632B69766B0007DE03 /* DroneteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneteUITests.swift; sourceTree = "<group>"; };
 		5D1B99652B69766B0007DE03 /* DroneteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneteUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5D1B99762B6977330007DE03 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5D1B99772B6977330007DE03 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		5D6F2CD82CDA9E2700DABBCC /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
-		5D6F2CD92CDA9E2700DABBCC /* CategoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
-		5DA554EF2C8F60C400278FC6 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		5DA554EF2C8F60C400278FC6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5DC881E82BDFEDA40058C003 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		5DC881E92BDFEDA40058C003 /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
 		5DC881ED2BE01C890058C003 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		5DC881EF2BE01C920058C003 /* MainViewDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewDataManager.swift; sourceTree = "<group>"; };
-		5DC881F12BE01C9B0058C003 /* MainViewApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewApiClient.swift; sourceTree = "<group>"; };
-		5DC881F62BE01E780058C003 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 		5DC881F82BE032B60058C003 /* DroneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +100,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1125116A2DE2561500C7A9D8 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				1125116E2DE256D000C7A9D8 /* ApiError.swift */,
+				1125116C2DE256C800C7A9D8 /* DroneAPIClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		1125116B2DE2562D00C7A9D8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				112511702DE256E900C7A9D8 /* DroneRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		1125117A2DE259FF00C7A9D8 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				112511742DE257E600C7A9D8 /* DroneDetailViewController.swift */,
+				112511752DE257E600C7A9D8 /* DroneDetailViewController.xib */,
+				112511782DE2580400C7A9D8 /* DroneDetailViewModel.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		5D1B99332B6976690007DE03 = {
 			isa = PBXGroup;
 			children = (
@@ -121,12 +150,15 @@
 		5D1B993E2B6976690007DE03 /* Dronete */ = {
 			isa = PBXGroup;
 			children = (
+				1125116A2DE2561500C7A9D8 /* API */,
 				5DC881E62BDFE8500058C003 /* App */,
-				5DC881F32BE01E4F0058C003 /* Assets */,
 				5DC881F42BE01E5A0058C003 /* Commons */,
 				5D1B99742B6976DB0007DE03 /* CoreData */,
-				5D1B99722B6976760007DE03 /* UI */,
+				1125116B2DE2562D00C7A9D8 /* Data */,
+				5D1B99722B6976760007DE03 /* Features */,
 				5D1B99502B69766B0007DE03 /* Info.plist */,
+				5DC881F52BE01E650058C003 /* Models */,
+				5DC881F32BE01E4F0058C003 /* Resources */,
 			);
 			path = Dronete;
 			sourceTree = "<group>";
@@ -134,7 +166,7 @@
 		5D1B99582B69766B0007DE03 /* DroneteTests */ = {
 			isa = PBXGroup;
 			children = (
-				5D1B99592B69766B0007DE03 /* DroneteTests.swift */,
+				5D1B99592B69766B0007DE03 /* MainViewModelTests.swift */,
 			);
 			path = DroneteTests;
 			sourceTree = "<group>";
@@ -148,22 +180,13 @@
 			path = DroneteUITests;
 			sourceTree = "<group>";
 		};
-		5D1B99722B6976760007DE03 /* UI */ = {
+		5D1B99722B6976760007DE03 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				5D6F2CD72CDA9E1100DABBCC /* CategoryView */,
-				5D1B99752B6977260007DE03 /* MainView */,
-				5D1B99732B69767C0007DE03 /* LaunchScreen */,
+				1125117A2DE259FF00C7A9D8 /* Detail */,
+				5D1B99752B6977260007DE03 /* Main */,
 			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		5D1B99732B69767C0007DE03 /* LaunchScreen */ = {
-			isa = PBXGroup;
-			children = (
-				5D1B994D2B69766B0007DE03 /* LaunchScreen.storyboard */,
-			);
-			path = LaunchScreen;
+			path = Features;
 			sourceTree = "<group>";
 		};
 		5D1B99742B6976DB0007DE03 /* CoreData */ = {
@@ -174,32 +197,21 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
-		5D1B99752B6977260007DE03 /* MainView */ = {
+		5D1B99752B6977260007DE03 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				5DC881E72BDFED890058C003 /* MainCollectionViewCell */,
 				5D1B99762B6977330007DE03 /* MainViewController.swift */,
 				5D1B99772B6977330007DE03 /* MainViewController.xib */,
 				5DC881ED2BE01C890058C003 /* MainViewModel.swift */,
-				5DC881EF2BE01C920058C003 /* MainViewDataManager.swift */,
-				5DC881F12BE01C9B0058C003 /* MainViewApiClient.swift */,
 			);
-			path = MainView;
-			sourceTree = "<group>";
-		};
-		5D6F2CD72CDA9E1100DABBCC /* CategoryView */ = {
-			isa = PBXGroup;
-			children = (
-				5D6F2CD82CDA9E2700DABBCC /* CategoryViewController.swift */,
-				5D6F2CD92CDA9E2700DABBCC /* CategoryViewController.xib */,
-			);
-			path = CategoryView;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		5DA554EE2C8F60B800278FC6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				5DA554EF2C8F60C400278FC6 /* StringExtension.swift */,
+				5DA554EF2C8F60C400278FC6 /* Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -216,25 +228,25 @@
 		5DC881E72BDFED890058C003 /* MainCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				5DC881E92BDFEDA40058C003 /* MainCollectionViewCell.xib */,
 				5DC881E82BDFEDA40058C003 /* MainCollectionViewCell.swift */,
+				5DC881E92BDFEDA40058C003 /* MainCollectionViewCell.xib */,
 			);
 			path = MainCollectionViewCell;
 			sourceTree = "<group>";
 		};
-		5DC881F32BE01E4F0058C003 /* Assets */ = {
+		5DC881F32BE01E4F0058C003 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				5D1B994B2B69766B0007DE03 /* Assets.xcassets */,
+				5D1B994D2B69766B0007DE03 /* LaunchScreen.storyboard */,
 			);
-			path = Assets;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		5DC881F42BE01E5A0058C003 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
 				5DA554EE2C8F60B800278FC6 /* Extensions */,
-				5DC881F52BE01E650058C003 /* Models */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -242,7 +254,6 @@
 		5DC881F52BE01E650058C003 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5DC881F62BE01E780058C003 /* ItemModel.swift */,
 				5DC881F82BE032B60058C003 /* DroneModel.swift */,
 			);
 			path = Models;
@@ -354,8 +365,8 @@
 			files = (
 				5D1B994F2B69766B0007DE03 /* LaunchScreen.storyboard in Resources */,
 				5D1B99792B6977330007DE03 /* MainViewController.xib in Resources */,
+				112511772DE257E600C7A9D8 /* DroneDetailViewController.xib in Resources */,
 				5D1B994C2B69766B0007DE03 /* Assets.xcassets in Resources */,
-				5D6F2CDA2CDA9E2700DABBCC /* CategoryViewController.xib in Resources */,
 				5DC881EB2BDFEDA40058C003 /* MainCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,16 +393,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D1B994A2B6976690007DE03 /* Dronete.xcdatamodeld in Sources */,
-				5DC881F02BE01C920058C003 /* MainViewDataManager.swift in Sources */,
+				112511792DE2580400C7A9D8 /* DroneDetailViewModel.swift in Sources */,
 				5D1B99402B6976690007DE03 /* AppDelegate.swift in Sources */,
-				5DC881F72BE01E780058C003 /* ItemModel.swift in Sources */,
-				5D6F2CDB2CDA9E2700DABBCC /* CategoryViewController.swift in Sources */,
-				5DC881F22BE01C9B0058C003 /* MainViewApiClient.swift in Sources */,
+				1125116D2DE256C800C7A9D8 /* DroneAPIClient.swift in Sources */,
+				112511712DE256E900C7A9D8 /* DroneRepository.swift in Sources */,
+				1125116F2DE256D000C7A9D8 /* ApiError.swift in Sources */,
 				5DC881EA2BDFEDA40058C003 /* MainCollectionViewCell.swift in Sources */,
 				5DC881F92BE032B60058C003 /* DroneModel.swift in Sources */,
+				112511762DE257E600C7A9D8 /* DroneDetailViewController.swift in Sources */,
 				5D1B99422B6976690007DE03 /* SceneDelegate.swift in Sources */,
 				5D1B99782B6977330007DE03 /* MainViewController.swift in Sources */,
-				5DA554F02C8F60C400278FC6 /* StringExtension.swift in Sources */,
+				5DA554F02C8F60C400278FC6 /* Extensions.swift in Sources */,
 				5DC881EE2BE01C890058C003 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,7 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D1B995A2B69766B0007DE03 /* DroneteTests.swift in Sources */,
+				5D1B995A2B69766B0007DE03 /* MainViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
