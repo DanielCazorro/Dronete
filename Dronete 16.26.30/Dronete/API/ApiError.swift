@@ -21,8 +21,8 @@ extension ApiError: LocalizedError {
         case .invalidURL:
             return "La URL de la API no es válida."
         case .invalidResponse(let statusCode):
-            if let code = statusCode {
-                return "Respuesta inválida del servidor (código \(code))."
+            if let statusCode {
+                return "Respuesta inválida del servidor (código \(statusCode))."
             } else {
                 return "Respuesta inválida del servidor."
             }

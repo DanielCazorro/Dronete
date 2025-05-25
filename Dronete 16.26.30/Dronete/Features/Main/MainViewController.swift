@@ -11,6 +11,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate {
 
     // MARK: - Properties
     private var viewModel = MainViewModel()
+    private let loadingIndicator = UIActivityIndicatorView(style: .large)
 
     // MARK: - IBOutlets
     @IBOutlet weak var cvMainCollectionView: UICollectionView!
@@ -21,15 +22,21 @@ class MainViewController: UIViewController, UICollectionViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         applyGradientBackground()
+        navigationItem.backButtonTitle = "Volver"
         setupCollectionView()
         setupViewModel()
+        loadingIndicator.center = view.center
+        loadingIndicator.hidesWhenStopped = true
+        view.addSubview(loadingIndicator)
+        loadingIndicator.startAnimating()
         viewModel.fetchData()
     }
 
     private func applyGradientBackground() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [
-            UIColor.systemBlue.cgColor,
+            UIColor.systemPurple.cgColor,
+            UIColor.systemIndigo.cgColor,
             UIColor.systemTeal.cgColor
         ]
         gradientLayer.startPoint = CGPoint(x: 0, y: 0)
@@ -61,9 +68,27 @@ class MainViewController: UIViewController, UICollectionViewDelegate {
     private func setupViewModel() {
         viewModel.didUpdateData = { [weak self] in
             DispatchQueue.main.async {
+                self?.loadingIndicator.stopAnimating()
                 self?.cvMainCollectionView.reloadData()
             }
         }
+    }
+}
+
+// MARK: - UICollectionViewDelegate
+extension MainViewController {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let manufacturer = viewModel.manufacturer(at: indexPath.item),
+              let drones = viewModel.dronesByManufacturer[manufacturer] else { return }
+
+        let droneListVC = DroneListViewController(nibName: "DroneListViewController", bundle: nil)
+        droneListVC.viewModel = DroneListViewModel(brand: manufacturer, drones: drones)
+
+        let transition = CATransition()
+        transition.duration = 0.35
+        transition.type = .fade
+        navigationController?.view.layer.add(transition, forKey: kCATransition)
+        navigationController?.pushViewController(droneListVC, animated: false)
     }
 }
 
