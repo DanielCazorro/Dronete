@@ -24,8 +24,8 @@ class DroneAPIClient {
                 return
             }
 
-            guard let httpResponse = urlResponse as? HTTPURLResponse,
-                  (200...299).contains(httpResponse.statusCode) else {
+            let range = (200...299)
+            guard let httpResponse = urlResponse as? HTTPURLResponse, range.contains(httpResponse.statusCode) else {
                 let statusCode = (urlResponse as? HTTPURLResponse)?.statusCode
                 print("❌ Respuesta inválida del servidor (\(statusCode ?? 0))")
                 completion(.failure(ApiError.invalidResponse(statusCode: statusCode)))

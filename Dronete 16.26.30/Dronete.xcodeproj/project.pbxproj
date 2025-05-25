@@ -16,6 +16,9 @@
 		11439ABC2DE32E6F0075E4C7 /* DroneListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11439ABA2DE32E6F0075E4C7 /* DroneListViewController.swift */; };
 		11439ABD2DE32E6F0075E4C7 /* DroneListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11439ABB2DE32E6F0075E4C7 /* DroneListViewController.xib */; };
 		11439ABF2DE32E7B0075E4C7 /* DroneListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11439ABE2DE32E7B0075E4C7 /* DroneListViewModel.swift */; };
+		11439AC32DE332F20075E4C7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11439AC12DE332F20075E4C7 /* SettingsViewController.swift */; };
+		11439AC42DE332F20075E4C7 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11439AC22DE332F20075E4C7 /* SettingsViewController.xib */; };
+		11439AC62DE332FB0075E4C7 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11439AC52DE332FB0075E4C7 /* SettingsViewModel.swift */; };
 		5D1B99402B6976690007DE03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B993F2B6976690007DE03 /* AppDelegate.swift */; };
 		5D1B99422B6976690007DE03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B99412B6976690007DE03 /* SceneDelegate.swift */; };
 		5D1B994A2B6976690007DE03 /* Dronete.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B99482B6976690007DE03 /* Dronete.xcdatamodeld */; };
@@ -60,6 +63,9 @@
 		11439ABA2DE32E6F0075E4C7 /* DroneListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneListViewController.swift; sourceTree = "<group>"; };
 		11439ABB2DE32E6F0075E4C7 /* DroneListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DroneListViewController.xib; sourceTree = "<group>"; };
 		11439ABE2DE32E7B0075E4C7 /* DroneListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneListViewModel.swift; sourceTree = "<group>"; };
+		11439AC12DE332F20075E4C7 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		11439AC22DE332F20075E4C7 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		11439AC52DE332FB0075E4C7 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		5D1B993C2B6976690007DE03 /* Dronete.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dronete.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1B993F2B6976690007DE03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D1B99412B6976690007DE03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +149,16 @@
 			path = List;
 			sourceTree = "<group>";
 		};
+		11439AC02DE332E10075E4C7 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				11439AC12DE332F20075E4C7 /* SettingsViewController.swift */,
+				11439AC22DE332F20075E4C7 /* SettingsViewController.xib */,
+				11439AC52DE332FB0075E4C7 /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		5D1B99332B6976690007DE03 = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +218,7 @@
 				1125117A2DE259FF00C7A9D8 /* Detail */,
 				11439AB92DE32E600075E4C7 /* List */,
 				5D1B99752B6977260007DE03 /* Main */,
+				11439AC02DE332E10075E4C7 /* Settings */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -385,6 +402,7 @@
 				112511772DE257E600C7A9D8 /* DroneDetailViewController.xib in Resources */,
 				11439ABD2DE32E6F0075E4C7 /* DroneListViewController.xib in Resources */,
 				5D1B994C2B69766B0007DE03 /* Assets.xcassets in Resources */,
+				11439AC42DE332F20075E4C7 /* SettingsViewController.xib in Resources */,
 				5DC881EB2BDFEDA40058C003 /* MainCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +435,8 @@
 				112511712DE256E900C7A9D8 /* DroneRepository.swift in Sources */,
 				1125116F2DE256D000C7A9D8 /* ApiError.swift in Sources */,
 				5DC881EA2BDFEDA40058C003 /* MainCollectionViewCell.swift in Sources */,
+				11439AC32DE332F20075E4C7 /* SettingsViewController.swift in Sources */,
+				11439AC62DE332FB0075E4C7 /* SettingsViewModel.swift in Sources */,
 				5DC881F92BE032B60058C003 /* DroneModel.swift in Sources */,
 				112511762DE257E600C7A9D8 /* DroneDetailViewController.swift in Sources */,
 				5D1B99422B6976690007DE03 /* SceneDelegate.swift in Sources */,

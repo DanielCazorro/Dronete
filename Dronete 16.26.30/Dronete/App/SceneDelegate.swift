@@ -17,12 +17,26 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
 
-        let window = UIWindow(windowScene: scene)
-        let navigationController = UINavigationController()
-        let mainViewController = MainViewController()
+        // ✅ Estilo visual del tab bar antes de crear las vistas
+        let tabBarAppearance = UITabBar.appearance()
+        tabBarAppearance.tintColor = .white // Activo
+        tabBarAppearance.unselectedItemTintColor = UIColor.lightGray // Inactivo
 
-        navigationController.setViewControllers([mainViewController], animated: true)
-        window.rootViewController = navigationController
+        let window = UIWindow(windowScene: scene)
+
+        let mainVC = MainViewController(nibName: "MainViewController", bundle: nil)
+        mainVC.tabBarItem = UITabBarItem(title: "Inicio", image: UIImage(systemName: "house"), tag: 0)
+
+        let settingsVC = SettingsViewController(nibName: "SettingsViewController", bundle: nil)
+        settingsVC.tabBarItem = UITabBarItem(title: "Ajustes", image: UIImage(systemName: "gearshape"), tag: 1)
+
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [
+            UINavigationController(rootViewController: mainVC),
+            UINavigationController(rootViewController: settingsVC)
+        ]
+
+        window.rootViewController = tabBarController
         window.makeKeyAndVisible()
         self.window = window
     }

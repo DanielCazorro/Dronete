@@ -15,8 +15,6 @@ class MainViewController: UIViewController, UICollectionViewDelegate {
 
     // MARK: - IBOutlets
     @IBOutlet weak var cvMainCollectionView: UICollectionView!
-    @IBOutlet weak var favoritesButton: UITabBarItem!
-    @IBOutlet weak var moreButton: UITabBarItem!
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -30,6 +28,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate {
         view.addSubview(loadingIndicator)
         loadingIndicator.startAnimating()
         viewModel.fetchData()
+
     }
 
     private func applyGradientBackground() {
