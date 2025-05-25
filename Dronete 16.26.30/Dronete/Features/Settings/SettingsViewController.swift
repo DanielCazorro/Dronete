@@ -61,5 +61,35 @@ class SettingsViewController: UIViewController {
             label.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 16),
             label.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
+
+        let darkModeLabel = UILabel()
+        darkModeLabel.text = "Modo oscuro"
+        darkModeLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        darkModeLabel.textColor = .white
+        darkModeLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        let darkModeSwitch = UISwitch()
+        darkModeSwitch.isOn = AppSettings.isDarkModeEnabled
+        darkModeSwitch.onTintColor = .systemPurple
+        darkModeSwitch.translatesAutoresizingMaskIntoConstraints = false
+        darkModeSwitch.addTarget(self, action: #selector(darkModeSwitchChanged(_:)), for: .valueChanged)
+
+        view.addSubview(darkModeLabel)
+        view.addSubview(darkModeSwitch)
+
+        NSLayoutConstraint.activate([
+            darkModeLabel.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 40),
+            darkModeLabel.leadingAnchor.constraint(equalTo: view.centerXAnchor, constant: -70),
+
+            darkModeSwitch.centerYAnchor.constraint(equalTo: darkModeLabel.centerYAnchor),
+            darkModeSwitch.leadingAnchor.constraint(equalTo: darkModeLabel.trailingAnchor, constant: 16)
+        ])
+    }
+
+    @objc private func darkModeSwitchChanged(_ sender: UISwitch) {
+        AppSettings.isDarkModeEnabled = sender.isOn
+        guard let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
+              let window = sceneDelegate.window else { return }
+        window.overrideUserInterfaceStyle = sender.isOn ? .dark : .light
     }
 }

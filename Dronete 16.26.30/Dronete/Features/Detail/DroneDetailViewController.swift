@@ -9,6 +9,8 @@ import UIKit
 
 class DroneDetailViewController: UIViewController {
 
+    private var gradientLayer: CAGradientLayer?
+
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var manufacturerLabel: UILabel!
     @IBOutlet weak var classLabel: UILabel!
@@ -26,24 +28,59 @@ class DroneDetailViewController: UIViewController {
         super.viewDidLoad()
         title = "Detalles del Dron"
         applyGradientBackground()
-        loadingIndicator.center = view.center
-        loadingIndicator.hidesWhenStopped = true
-        view.addSubview(loadingIndicator)
-        loadingIndicator.startAnimating()
+        applySettingsIfNeeded()
+        setupLoadingIndicator()
         configureView()
     }
 
     private func applyGradientBackground() {
         let gradient = CAGradientLayer()
         gradient.frame = view.bounds
-        gradient.colors = [
-            UIColor.systemIndigo.cgColor,
-            UIColor.systemBlue.cgColor,
-            UIColor.systemTeal.cgColor
-        ]
+
+        if traitCollection.userInterfaceStyle == .dark {
+            gradient.colors = [
+                UIColor.black.cgColor,
+                UIColor.darkGray.cgColor
+            ]
+        } else {
+            gradient.colors = [
+                UIColor.systemIndigo.cgColor,
+                UIColor.systemBlue.cgColor,
+                UIColor.systemTeal.cgColor
+            ]
+        }
+
         gradient.startPoint = CGPoint(x: 0, y: 0)
         gradient.endPoint = CGPoint(x: 1, y: 1)
         view.layer.insertSublayer(gradient, at: 0)
+        self.gradientLayer = gradient
+    }
+
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if previousTraitCollection?.userInterfaceStyle != traitCollection.userInterfaceStyle {
+            gradientLayer?.removeFromSuperlayer()
+            applyGradientBackground()
+        }
+    }
+    
+    private func applySettingsIfNeeded() {
+        // Aquí se aplicarán preferencias de usuario desde UserDefaults (ej: modo oscuro)
+    }
+    
+    private func setupLoadingIndicator() {
+        loadingIndicator.center = view.center
+        loadingIndicator.hidesWhenStopped = true
+        view.addSubview(loadingIndicator)
+        loadingIndicator.startAnimating()
+    }
+    
+    private func setupStackViewConstraints(_ stackView: UIStackView) {
+        NSLayoutConstraint.activate([
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
     }
 
     private func configureView() {
@@ -73,11 +110,7 @@ class DroneDetailViewController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(stackView)
 
-        NSLayoutConstraint.activate([
-            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
+        setupStackViewConstraints(stackView)
 
         values.forEach { (label, title) in
             let container = UIStackView()

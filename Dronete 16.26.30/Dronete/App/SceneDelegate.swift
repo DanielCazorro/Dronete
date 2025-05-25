@@ -23,6 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         tabBarAppearance.unselectedItemTintColor = UIColor.lightGray // Inactivo
 
         let window = UIWindow(windowScene: scene)
+        window.overrideUserInterfaceStyle = AppSettings.isDarkModeEnabled ? .dark : .light
 
         let mainVC = MainViewController(nibName: "MainViewController", bundle: nil)
         mainVC.tabBarItem = UITabBarItem(title: "Inicio", image: UIImage(systemName: "house"), tag: 0)
