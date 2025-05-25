@@ -21,6 +21,11 @@ class DroneListViewController: UIViewController {
         setupCollectionView()
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        gradientLayer?.frame = view.bounds
+    }
+
     private func applyGradientBackground() {
         let gradient = CAGradientLayer()
         gradient.colors = [
@@ -31,19 +36,9 @@ class DroneListViewController: UIViewController {
         gradient.startPoint = CGPoint(x: 0, y: 0)
         gradient.endPoint = CGPoint(x: 1, y: 1)
         gradient.frame = view.bounds
-        gradientLayer = gradient
-
-        let backgroundView = UIView()
-        backgroundView.translatesAutoresizingMaskIntoConstraints = false
-        view.insertSubview(backgroundView, at: 0)
-        backgroundView.layer.insertSublayer(gradient, at: 0)
-
-        NSLayoutConstraint.activate([
-            backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
-            backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
+        gradient.zPosition = -1
+        view.layer.insertSublayer(gradient, at: 0)
+        self.gradientLayer = gradient
     }
 
     private func setupCollectionView() {

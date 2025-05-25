@@ -33,25 +33,20 @@ class DroneDetailViewController: UIViewController {
         configureView()
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        gradientLayer?.frame = view.bounds
+    }
+
     private func applyGradientBackground() {
         let gradient = CAGradientLayer()
-        gradient.frame = view.bounds
-
-        if traitCollection.userInterfaceStyle == .dark {
-            gradient.colors = [
-                UIColor.black.cgColor,
-                UIColor.darkGray.cgColor
-            ]
-        } else {
-            gradient.colors = [
-                UIColor.systemIndigo.cgColor,
-                UIColor.systemBlue.cgColor,
-                UIColor.systemTeal.cgColor
-            ]
-        }
-
+        gradient.colors = traitCollection.userInterfaceStyle == .dark
+            ? [UIColor.black.cgColor, UIColor.darkGray.cgColor]
+            : [UIColor.systemIndigo.cgColor, UIColor.systemBlue.cgColor, UIColor.systemTeal.cgColor]
         gradient.startPoint = CGPoint(x: 0, y: 0)
         gradient.endPoint = CGPoint(x: 1, y: 1)
+        gradient.frame = view.bounds
+        gradient.zPosition = -1
         view.layer.insertSublayer(gradient, at: 0)
         self.gradientLayer = gradient
     }

@@ -12,6 +12,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate {
     // MARK: - Properties
     private var viewModel = MainViewModel()
     private let loadingIndicator = UIActivityIndicatorView(style: .large)
+    private var gradientLayer: CAGradientLayer?
 
     // MARK: - IBOutlets
     @IBOutlet weak var cvMainCollectionView: UICollectionView!
@@ -32,19 +33,23 @@ class MainViewController: UIViewController, UICollectionViewDelegate {
     }
 
     private func applyGradientBackground() {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [
+        let gradient = CAGradientLayer()
+        gradient.colors = [
             UIColor.systemPurple.cgColor,
             UIColor.systemIndigo.cgColor,
             UIColor.systemTeal.cgColor
         ]
-        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
-        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
-        gradientLayer.frame = view.bounds
+        gradient.startPoint = CGPoint(x: 0, y: 0)
+        gradient.endPoint = CGPoint(x: 1, y: 1)
+        gradient.frame = view.bounds
+        gradient.zPosition = -1
+        view.layer.insertSublayer(gradient, at: 0)
+        self.gradientLayer = gradient
+    }
 
-        let backgroundView = UIView(frame: view.bounds)
-        backgroundView.layer.insertSublayer(gradientLayer, at: 0)
-        view.insertSubview(backgroundView, at: 0)
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        gradientLayer?.frame = view.bounds
     }
 
     private func setupCollectionView() {
