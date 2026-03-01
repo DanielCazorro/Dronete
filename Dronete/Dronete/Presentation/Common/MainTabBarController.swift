@@ -10,6 +10,7 @@ import UIKit
 final class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureBars()
         setupTabs()
     }
 
@@ -22,12 +23,29 @@ final class MainTabBarController: UITabBarController {
         viewControllers = [news, drones, regulations, profile]
     }
 
+    private func configureBars() {
+        let nav = UINavigationBarAppearance()
+        nav.configureWithOpaqueBackground()
+        nav.backgroundColor = .systemBackground
+        UINavigationBar.appearance().standardAppearance = nav
+        UINavigationBar.appearance().scrollEdgeAppearance = nav
+        UINavigationBar.appearance().compactAppearance = nav
+
+        let tab = UITabBarAppearance()
+        tab.configureWithOpaqueBackground()
+        tab.backgroundColor = .systemBackground
+        UITabBar.appearance().standardAppearance = tab
+        UITabBar.appearance().scrollEdgeAppearance = tab
+    }
+
     private func makeNewsNav() -> UINavigationController {
         let service = MockNewsAPIService()
-        let repository = NewsRepositoryImpl(service: service)
+        let cacheStore = DiskNewsCacheStore()
+        let repository = NewsRepositoryImpl(service: service, cacheStore: cacheStore)
         let useCase = GetNewsUseCase(repository: repository)
         let viewModel = NewsListViewModel(getNewsUseCase: useCase)
         let vc = NewsListViewController(viewModel: viewModel)
+
         vc.title = "Noticias"
 
         let nav = UINavigationController(rootViewController: vc)
