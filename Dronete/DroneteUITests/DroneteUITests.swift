@@ -2,7 +2,7 @@
 //  DroneteUITests.swift
 //  DroneteUITests
 //
-//  Created by Daniel Cazorro Frías on 30/1/24.
+//  Created by Daniel Cazorro on 1/3/26.
 //
 
 import XCTest
@@ -22,6 +22,7 @@ final class DroneteUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+    @MainActor
     func testExample() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
@@ -30,12 +31,11 @@ final class DroneteUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
+    @MainActor
     func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
+        // This measures how long it takes to launch your application.
+        measure(metrics: [XCTApplicationLaunchMetric()]) {
+            XCUIApplication().launch()
         }
     }
 }

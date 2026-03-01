@@ -2,7 +2,7 @@
 //  DroneteUITestsLaunchTests.swift
 //  DroneteUITests
 //
-//  Created by Daniel Cazorro Frías on 30/1/24.
+//  Created by Daniel Cazorro on 1/3/26.
 //
 
 import XCTest
@@ -17,6 +17,7 @@ final class DroneteUITestsLaunchTests: XCTestCase {
         continueAfterFailure = false
     }
 
+    @MainActor
     func testLaunch() throws {
         let app = XCUIApplication()
         app.launch()
