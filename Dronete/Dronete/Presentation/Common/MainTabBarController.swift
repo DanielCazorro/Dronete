@@ -14,15 +14,32 @@ final class MainTabBarController: UITabBarController {
     }
 
     private func setupTabs() {
-        let news = makeNav(title: "Noticias", symbol: "newspaper")
-        let drones = makeNav(title: "Modelos", symbol: "airplane")
-        let regulations = makeNav(title: "Regulación", symbol: "globe")
-        let profile = makeNav(title: "Perfil", symbol: "person.crop.circle")
+        let news = makeNewsNav()
+        let drones = makePlaceholderNav(title: "Modelos", symbol: "airplane")
+        let regulations = makePlaceholderNav(title: "Regulación", symbol: "globe")
+        let profile = makePlaceholderNav(title: "Perfil", symbol: "person.crop.circle")
 
         viewControllers = [news, drones, regulations, profile]
     }
 
-    private func makeNav(title: String, symbol: String) -> UINavigationController {
+    private func makeNewsNav() -> UINavigationController {
+        let service = MockNewsAPIService()
+        let repository = NewsRepositoryImpl(service: service)
+        let useCase = GetNewsUseCase(repository: repository)
+        let viewModel = NewsListViewModel(getNewsUseCase: useCase)
+        let vc = NewsListViewController(viewModel: viewModel)
+        vc.title = "Noticias"
+
+        let nav = UINavigationController(rootViewController: vc)
+        nav.tabBarItem = UITabBarItem(
+            title: "Noticias",
+            image: UIImage(systemName: "newspaper"),
+            tag: 0
+        )
+        return nav
+    }
+
+    private func makePlaceholderNav(title: String, symbol: String) -> UINavigationController {
         let vc = PlaceholderViewController(screenTitle: title)
         vc.title = title
 
